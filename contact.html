@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Christmas Store</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body>
+    <header class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500" role="banner">
+		<h1 class="text-4xl font-bold text-white text-center pt-10 pb-6">Welcome to Our Christmas Store</h1>
+		<p class="text-lg text-center text-white pb-10">This page should be tried in Safari, Chrome, or Mozilla.</p>
+	</header>
+
+   <nav>
+      <div class="navb">
+         <ul class="flex justify-center">
+             <li class="mr-6">
+                 <a href="contact.html" class="text-xl hover:text-4xl duration-500 shadow-lg">CONTACTS</a>
+             </li>
+             <li class="mr-6">
+                 <a href="deals.html" class="text-xl hover:text-4xl duration-500 shadow-lg">DEALS</a>
+             </li>
+             <li class="mr-6">
+                 <a href="index.html" class="text-xl hover:text-4xl duration-500 shadow-lg">HOME</a>
+             </li>
+         </ul>
+     </div>
+   </nav>
+
+   <div style="text-align: left;">
+    
+        <h2>Contact Us</h2>
+        <div class="">
+            <form class="contactForm" action="/index.html" >
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" value="John" size=50><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" value="Doe" maxlength=50><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="xyz@gmail.com" maxlength=50><br><br>
+                <label for="msg">Your message:</label><br>
+                <textarea id="msg" rows="10" cols="50">Type here...</textarea>
+                <br>
+                <input type="submit" value="Submit" id="submit-button">
+            </form> 
+        </div>
+    </div>
+    
+
+
+     
+    
+    <aside>
+        <p>This is the aside part of the web page.</p>
+    </aside> 
+
+
+    <footer class="text-center">&copy;Nasheen Nur 2023 </footer>
+    
+    <script>
+        const submitButton = document.getElementById("submit-button");
+
+			submitButton.addEventListener("click", function(event) {
+			event.preventDefault();
+			// submit form data
+			alert("Form submitted successfully!");
+
+			const alertBox = document.createElement("div");
+			alertBox.classList.add("bg-green-500", "text-white", "p-4", "rounded", "mt-4");
+			alertBox.textContent = "Form submitted successfully!";
+			document.body.insertBefore(alertBox, document.body.firstChild);
+			});
+    </script>
+</body>
+</html>
